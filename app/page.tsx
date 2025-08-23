@@ -18,7 +18,7 @@ import {
   TrendingUp,
 
 } from "lucide-react";
-
+import { ReactNode } from "react";
 // CONTACT INFO
 const CONTACTS = {
   email: "saurabhshinde825@gmail.com",
@@ -246,9 +246,20 @@ const ACHIEVEMENTS = [
   },
 ];
 
+// Define the Drop type
+type Drop = {
+  id: number;
+  x: number;
+  y: number;
+  speed: number;
+  opacity: number;
+};
+
+
+
 // ANIMATED PARTICLES
 const MatrixRain = () => {
-  const [drops, setDrops] = useState([]);
+ const [drops, setDrops] = useState<Drop[]>([]);
 
   useEffect(() => {
     const newDrops = Array.from({ length: 50 }, (_, i) => ({
@@ -290,32 +301,38 @@ const MatrixRain = () => {
 };
 
 // TYPING ANIMATION HOOK
-const useTypewriter = (text, speed = 50) => {
-  const [displayText, setDisplayText] = useState('');
+const useTypewriter = (text: string, speed: number = 50): string => {
+  const [displayText, setDisplayText] = useState<string>("");
 
   useEffect(() => {
     let i = 0;
-    const timer = setInterval(() => {
-      if (i < text.length) {
-        setDisplayText(text.slice(0, i + 1));
-        i++;
-      } else {
-        clearInterval(timer);
-      }
+    const interval = setInterval(() => {
+      setDisplayText((prev) => prev + text.charAt(i));
+      i++;
+      if (i >= text.length) clearInterval(interval);
     }, speed);
-    return () => clearInterval(timer);
+
+    return () => clearInterval(interval);
   }, [text, speed]);
 
   return displayText;
 };
 
 // SECTION COMPONENT
-const Section = ({ id, title, children, className = "" }) => (
+type SectionProps = {
+  id: string;
+  title: ReactNode;
+  children: ReactNode;
+  className?: string;
+};
+
+const Section = ({ id, title, children, className = "" }: SectionProps) => (
   <section id={id} className={`py-24 px-6 md:px-12 relative ${className}`}>
     <div
       className="text-5xl md:text-6xl font-bold mb-16 text-center"
       style={{
-        background: "linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)",
+        background:
+          "linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)",
         WebkitBackgroundClip: "text",
         WebkitTextFillColor: "transparent",
         backgroundClip: "text",
@@ -328,26 +345,30 @@ const Section = ({ id, title, children, className = "" }) => (
 );
 
 export default function Page() {
-  const [expandedProject, setExpandedProject] = useState(null);
-  const [activeSkill, setActiveSkill] = useState(null);
+const [expandedProject, setExpandedProject] = useState<number | null>(null);
+const [activeSkill, setActiveSkill] = useState<number | null>(null);
+
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [scrollY, setScrollY] = useState(0);
 
   const typewriterText = useTypewriter("Building Systems That Scale to Millions", 80);
 
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-    const handleScroll = () => setScrollY(window.scrollY);
-    
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+useEffect(() => {
+  const handleMouseMove = (e: MouseEvent) => {
+    setMousePosition({ x: e.clientX, y: e.clientY });
+  };
+
+  const handleScroll = () => setScrollY(window.scrollY);
+
+  window.addEventListener("mousemove", handleMouseMove);
+  window.addEventListener("scroll", handleScroll);
+
+  return () => {
+    window.removeEventListener("mousemove", handleMouseMove);
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-x-hidden">
