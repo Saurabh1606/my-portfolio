@@ -195,7 +195,7 @@ const PROJECTS = [
   {
     title: "Zero-Trust IAM System",
     company: "Accelya Solutions",
-    desc: "Designed enterprise-grade identity platform with SSO, MFA, and JWT-based authentication. Implemented OAuth 2.0/OIDC flows and integrated with Keycloak for seamless user experience across 20+ applications.",
+    desc: "Designed enterprise-grade identity platform with SSO, MFA, and JWT-based authentication. Implemented OAuth 2.0/OIDC flows and integrated with Keycloak for seamless user experience across 3+ applications.",
     techStack: ["Spring Security", "JWT", "OAuth2", "Keycloak", "Redis"],
     metrics: {
       users: "100K+ active users",
