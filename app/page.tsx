@@ -5,27 +5,18 @@ import {
   ArrowRight,
   Github,
   Mail,
-  Moon,
-  Sun,
   ExternalLink,
   FileText,
   ChevronDown,
   ChevronUp,
-  GraduationCap,
-  Award,
+
   BookOpen,
   User,
   Rocket,
-  Zap,
+
   Target,
   TrendingUp,
-  Users,
-  Clock,
-  Shield,
-  Database,
-  Code,
-  Cpu,
-  Globe,
+
 } from "lucide-react";
 
 // CONTACT INFO
@@ -867,9 +858,9 @@ export default function Page() {
   <div className="max-w-5xl mx-auto">
     <div className="text-center mb-16">
       <p className="text-2xl text-gray-300 mb-8 leading-relaxed">
-        I'm actively seeking <span className="text-blue-400 font-bold">Staff/Senior Engineer</span> 
+        I&apos;m actively seeking <span className="text-blue-400 font-bold">Staff/Senior Engineer</span> 
         opportunities at <span className="text-purple-400 font-bold">innovative tech companies</span>.  
-        Let’s collaborate and build impactful solutions together.
+        Let&apos;s collaborate and build impactful solutions together.
       </p>
 
       <div className="flex flex-wrap justify-center gap-4 mb-12">
