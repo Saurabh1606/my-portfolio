@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect ,useRef} from "react";
 import {
   ArrowRight,
   Github,
@@ -301,23 +301,33 @@ const MatrixRain = () => {
 };
 
 // TYPING ANIMATION HOOK
-const useTypewriter = (text: string, speed: number = 50): string => {
-  const [displayText, setDisplayText] = useState<string>("");
+export const useTypewriter = (text: string, speed: number = 100): string => {
+  const [displayText, setDisplayText] = useState("");
 
   useEffect(() => {
-    let i = 0;
-    const interval = setInterval(() => {
-      setDisplayText((prev) => prev + text.charAt(i));
-      i++;
-      if (i >= text.length) clearInterval(interval);
-    }, speed);
+    // Reset display text when text changes
+    setDisplayText("");
+    
+    let currentIndex = 0;
+    
+    const typeNextCharacter = () => {
+      if (currentIndex < text.length) {
+        setDisplayText(text.substring(0, currentIndex + 1));
+        currentIndex++;
+        setTimeout(typeNextCharacter, speed);
+      }
+    };
 
-    return () => clearInterval(interval);
+    const initialDelay = setTimeout(typeNextCharacter, 100);
+    
+    // Cleanup function
+    return () => {
+      clearTimeout(initialDelay);
+    };
   }, [text, speed]);
 
   return displayText;
 };
-
 // SECTION COMPONENT
 type SectionProps = {
   id: string;
