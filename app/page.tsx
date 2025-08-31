@@ -155,8 +155,8 @@ const PROJECTS = [
   {
     title: "Real-Time Pricing Engine",
     company: "Accelya Solutions",
-    desc: "Built a distributed, event-driven pricing system processing 1M+ pricing decisions per hour with sub-100ms latency. Implemented complex rule engines with caching strategies reducing computation costs by 60%.",
-    techStack: ["Java", "Kafka", "Redis", "PostgreSQL", "Docker"],
+    desc: "Distributed event-driven pricing engine designed to deliver sub-100ms p99 latency while processing 50K+ requests per hour. Leveraged Kafka for high-throughput messaging, Redis caching for faster rule evaluation, and Oracle optimizations to reduce computation costs by 60%, achieving 99.95% availability on Docker deployments.",
+    techStack: ["Java", "Kafka", "Redis", "Oracle", "Docker"],
     metrics: {
       throughput: "50K+ requests/hour",
       latency: "<100ms p99",
@@ -175,8 +175,8 @@ const PROJECTS = [
   {
     title: "Airline Offer & Order Platform",
     company: "Accelya Solutions",
-    desc: "Engineered microservices platform handling end-to-end airline retailing flow. Designed event sourcing patterns and implemented CQRS for complex booking workflows serving millions of passengers.",
-    techStack: ["Spring Boot", "Microservices", "Event Sourcing", "CQRS", "Kubernetes"],
+    desc: "A scalable microservices-based platform was designed and developed to modernize airline retailing, covering the entire flow from offers and pricing to bookings and order fulfillment. Using Event Sourcing and CQRS patterns, complex booking workflows were streamlined while ensuring reliability, fault tolerance, and auditability. The platform now powers modern retailing for global airlines, handling over 10 million transactions per month with 99.9% availability and delivering faster, more efficient processing at scale.",
+    techStack: ["Spring Boot", "Microservices", "Event Sourcing", "CQRS", "Kubernetes","Redis","Kafka"],
     metrics: {
       throughput: "10M+ transactions/month",
       services: "7+ microservices",
@@ -239,10 +239,10 @@ const ACHIEVEMENTS = [
   },
   { 
     title: "System Design Expert", 
-    desc: "Engineered systems serving 50M+ users", 
+    desc: "Engineered systems serving 100K+ users", 
     icon: "🏗️",
     color: "from-purple-500 to-pink-500",
-    metric: "50M+ Users"
+    metric: "100K+ Users"
   },
 ];
 
@@ -479,7 +479,7 @@ useEffect(() => {
           
           {/* KEY HIGHLIGHTS */}
           <div className="max-w-4xl mx-auto text-xl text-gray-300 mb-12 space-y-2">
-            <div>✨ Engineering systems that handle <span className="text-blue-400 font-bold">50M+ monthly transactions</span></div>
+            <div>✨ Engineering systems that handle <span className="text-blue-400 font-bold">10M+ monthly transactions</span></div>
             <div>🎯 Delivered <span className="text-green-400 font-bold">30% revenue increase</span> through intelligent pricing systems</div>
             <div>🏗️ Expert in <span className="text-purple-400 font-bold">Microservices, Distributed Systems & High-Scale Architecture</span></div>
           </div>
@@ -551,9 +551,7 @@ useEffect(() => {
                     <h3 className="text-3xl font-bold text-white mb-2">Senior Software Engineer</h3>
                     <p className="text-2xl text-blue-400 font-semibold mb-4">Accelya Solutions</p>
                     <p className="text-gray-300 leading-relaxed">
-                      Leading backend Engineering for mission-critical airline platforms. Designing distributed systems 
-                      that process millions of transactions daily with 99.9% uptime. Mentoring junior engineers and 
-                      driving technical excellence across the organization.
+                      I’m a Senior Software Engineer specializing in designing scalable microservices, distributed event-driven systems, and high-performance backend platforms. I’ve worked on large-scale airline retailing systems serving millions of passengers, with expertise in Java, Spring Boot, Kafka, RabbitMQ, Redis, and cloud-native deployments
                     </p>
                   </div>
                   
@@ -889,7 +887,7 @@ useEffect(() => {
   <div className="max-w-5xl mx-auto">
     <div className="text-center mb-16">
       <p className="text-2xl text-gray-300 mb-8 leading-relaxed">
-        I&apos;m actively seeking <span className="text-blue-400 font-bold">Staff/Senior Engineer</span> 
+        I&apos;m actively seeking <span className="text-blue-400 font-bold">Senior Engineer</span> 
         opportunities at <span className="text-purple-400 font-bold">innovative tech companies</span>.  
         Let&apos;s collaborate and build impactful solutions together.
       </p>
