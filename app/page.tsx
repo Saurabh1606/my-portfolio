@@ -74,12 +74,12 @@ const IMPACT_METRICS = [
 
 // SYSTEM DESIGN SKILLS - WHAT FAANG LOOKS FOR
 const SYSTEM_DESIGN_SKILLS = [
-  { skill: "Microservices Engineerure", level: 95, icon: "🏗️" },
+  { skill: "Microservices", level: 95, icon: "🏗️" },
   { skill: "Distributed Systems", level: 90, icon: "🌐" },
   { skill: "High Availability Design", level: 92, icon: "🛡️" },
   { skill: "Scalability Engineering", level: 94, icon: "📈" },
   { skill: "Performance Optimization", level: 88, icon: "⚡" },
-  { skill: "Event-Driven Engineerure", level: 91, icon: "🔄" },
+  { skill: "Event-Driven", level: 91, icon: "🔄" },
 ];
 
 // ENHANCED TECH STACK - FAANG FOCUSED
@@ -190,7 +190,7 @@ const PROJECTS = [
     ],
     impact: "Enabled modern retailing for global airlines",
     gradient: "from-blue-600 to-cyan-600",
-    category: "Microservices Engineerure"
+    category: "Microservices"
   },
   {
     title: "Zero-Trust IAM System",
@@ -204,7 +204,7 @@ const PROJECTS = [
       loginTime: "<2s authentication"
     },
     challenges: [
-      "Multi-tenant security Engineerure",
+      "Multi-tenant security Engineering",
       "SSO across heterogeneous systems",
       "Compliance with aviation security standards"
     ],
@@ -551,7 +551,7 @@ useEffect(() => {
                     <h3 className="text-3xl font-bold text-white mb-2">Senior Software Engineer</h3>
                     <p className="text-2xl text-blue-400 font-semibold mb-4">Accelya Solutions</p>
                     <p className="text-gray-300 leading-relaxed">
-                      Leading backend Engineerure for mission-critical airline platforms. Designing distributed systems 
+                      Leading backend Engineering for mission-critical airline platforms. Designing distributed systems 
                       that process millions of transactions daily with 99.9% uptime. Mentoring junior engineers and 
                       driving technical excellence across the organization.
                     </p>
