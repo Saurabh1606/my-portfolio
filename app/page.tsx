@@ -91,7 +91,7 @@ const SYSTEM_DESIGN_SKILLS = [
 
 ];
 
-// ENHANCED TECH STACK - FAANG FOCUSED
+
 const TECH_STACK = [
   { 
     name: "Java", 
@@ -134,12 +134,12 @@ const TECH_STACK = [
     expertise: "Expert"
   },
   { 
-    name: "PostgreSQL", 
-    color: "from-sky-500 to-indigo-600", 
-    icon: "🛢️", 
-    years: "2+",
-    projects: "2+",
-    expertise: "Advanced"
+    name: "GANs (Generative AI)", 
+    color: "from-pink-500 to-purple-600", 
+    icon: "🎨", 
+    years: "1+",
+    projects: "1 Research Publication",
+    expertise: "Research"
   },
   { 
     name: "Oracle DB", 
