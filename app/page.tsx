@@ -74,12 +74,21 @@ const IMPACT_METRICS = [
 
 // SYSTEM DESIGN SKILLS - WHAT FAANG LOOKS FOR
 const SYSTEM_DESIGN_SKILLS = [
-  { skill: "Microservices", level: 95, icon: "🏗️" },
-  { skill: "Distributed Systems", level: 90, icon: "🌐" },
-  { skill: "High Availability Design", level: 92, icon: "🛡️" },
-  { skill: "Scalability Engineering", level: 94, icon: "📈" },
-  { skill: "Performance Optimization", level: 88, icon: "⚡" },
-  { skill: "Event-Driven", level: 91, icon: "🔄" },
+{ skill: "Java & Spring Boot", level: 95, icon: "☕" },
+{ skill: "API Design (REST/GraphQL)", level: 90, icon: "🔌" },
+{ skill: "Microservices Architecture", level: 95, icon: "🏗️" },
+{ skill: "Distributed Systems", level: 90, icon: "🌐" },
+{ skill: "High Availability & Fault Tolerance", level: 92, icon: "🛡️" },
+{ skill: "Scalability Engineering", level: 94, icon: "📈" },
+{ skill: "Performance Optimization", level: 88, icon: "⚡" },
+{ skill: "Event-Driven Design (Kafka/RabbitMQ)", level: 91, icon: "🔄" },
+{ skill: "SQL & NoSQL Databases(Oracle/Cassendra)", level: 89, icon: "🗄️" },
+{ skill: "Caching & In-Memory Stores (Redis)", level: 90, icon: "⚙️" },
+{ skill: "Cloud & Containerization (Docker/Kubernetes)", level: 92, icon: "☁️" },
+{ skill: "CI/CD & Automation", level: 87, icon: "🚀" },
+{ skill: "Security & IAM (Keycloak, JWT, SSO, MFA)", level: 85, icon: "🔐" },
+{ skill: "Monitoring & Observability", level: 83, icon: "📊" },
+
 ];
 
 // ENHANCED TECH STACK - FAANG FOCUSED
