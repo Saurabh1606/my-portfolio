@@ -97,25 +97,33 @@ const TECH_STACK = [
     name: "Java", 
     color: "from-orange-500 to-red-600", 
     icon: "☕", 
-    years: "3+",
-    projects: "2+",
+    years: "4+",
+    projects: "3+",
     expertise: "Expert"
   },
   { 
     name: "Spring Boot", 
     color: "from-green-500 to-emerald-600", 
     icon: "🍃", 
-    years: "3+",
-    projects: "2+",
+    years: "4+",
+    projects: "3+",
     expertise: "Expert"
   },
   { 
     name: "Apache Kafka", 
     color: "from-purple-500 to-violet-600", 
     icon: "📡", 
-    years: "2+",
+    years: "3+",
     projects: "2+",
     expertise: "Advanced"
+  },
+  { 
+    name: "RabbitMQ", 
+    color: "from-orange-400 to-red-500", 
+    icon: "📨", 
+    years: "2+",
+    projects: "2+",
+    expertise: "Intermediate"
   },
   { 
     name: "Redis", 
@@ -124,6 +132,30 @@ const TECH_STACK = [
     years: "3+",
     projects: "2+",
     expertise: "Expert"
+  },
+  { 
+    name: "PostgreSQL", 
+    color: "from-sky-500 to-indigo-600", 
+    icon: "🛢️", 
+    years: "2+",
+    projects: "2+",
+    expertise: "Advanced"
+  },
+  { 
+    name: "Oracle DB", 
+    color: "from-indigo-500 to-purple-600", 
+    icon: "🐘", 
+    years: "4+",
+    projects: "3+",
+    expertise: "Expert"
+  },
+  { 
+    name: "Cassandra", 
+    color: "from-teal-500 to-green-600", 
+    icon: "📊", 
+    years: "2+",
+    projects: "1+",
+    expertise: "Intermediate"
   },
   { 
     name: "AWS Cloud", 
@@ -138,26 +170,43 @@ const TECH_STACK = [
     color: "from-blue-400 to-blue-600", 
     icon: "🐳", 
     years: "3+",
-    projects: "2+",
-    expertise: "Expert"
-  },
-  { 
-    name: "Oracle", 
-    color: "from-indigo-500 to-purple-600", 
-    icon: "🐘", 
-    years: "4+",
-    projects: "2+",
+    projects: "3+",
     expertise: "Expert"
   },
   { 
     name: "Kubernetes", 
     color: "from-cyan-500 to-blue-600", 
     icon: "⚙️", 
+    years: "3+",
+    projects: "2+",
+    expertise: "Advanced"
+  },
+  { 
+    name: "Keycloak & IAM", 
+    color: "from-pink-500 to-rose-600", 
+    icon: "🔐", 
     years: "2+",
     projects: "2+",
     expertise: "Advanced"
   },
+  { 
+    name: "CI/CD (Jenkins, GitHub Actions)", 
+    color: "from-gray-500 to-slate-600", 
+    icon: "🚀", 
+    years: "3+",
+    projects: "3+",
+    expertise: "Advanced"
+  },
+  { 
+    name: "Monitoring (Prometheus, Grafana)", 
+    color: "from-lime-500 to-green-600", 
+    icon: "📈", 
+    years: "2+",
+    projects: "2+",
+    expertise: "Intermediate"
+  },
 ];
+
 
 // FAANG-STYLE PROJECTS WITH TECHNICAL DEPTH
 const PROJECTS = [
