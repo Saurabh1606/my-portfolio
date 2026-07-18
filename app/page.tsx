@@ -43,31 +43,31 @@ const nav = [
 // FAANG-STYLE IMPACT METRICS
 const IMPACT_METRICS = [
   {
-    value: "50M+",
-    label: "Monthly Transactions",
-    desc: "Scaled airline booking systems to handle massive traffic",
+    value: "1.2M+",
+    label: "Daily Transactions",
+    desc: "Architected microservices platforms supporting $45M annual cargo operations",
     icon: "🚀",
     color: "from-blue-500 to-cyan-500"
   },
   {
     value: "99.9%",
     label: "System Uptime",
-    desc: "Mission-critical systems with enterprise-grade reliability",
+    desc: "Mission-critical, fault-tolerant systems with zero data loss",
     icon: "⚡",
     color: "from-green-500 to-emerald-500"
   },
   {
-    value: "30%",
-    label: "Revenue Increase",
-    desc: "Dynamic pricing algorithms boosting airline profitability",
+    value: "2.5x",
+    label: "Throughput Improvement",
+    desc: "Boosted identity & consent platform throughput via Redis caching and async processing",
     icon: "📈",
     color: "from-purple-500 to-pink-500"
   },
   {
-    value: "10+",
-    label: "Global Airlines",
-    desc: "Enterprise clients trusting our scalable solutions",
-    icon: "✈️",
+    value: "<100ms",
+    label: "Authorization Latency",
+    desc: "Sub-100ms auth for millions of telecom subscribers and partner apps",
+    icon: "🔐",
     color: "from-orange-500 to-red-500"
   }
 ];
@@ -75,6 +75,7 @@ const IMPACT_METRICS = [
 // SYSTEM DESIGN SKILLS - WHAT FAANG LOOKS FOR
 const SYSTEM_DESIGN_SKILLS = [
 { skill: "Java & Spring Boot", level: 95, icon: "☕" },
+{ skill: "TypeScript, NestJS & Vue.js", level: 88, icon: "🟦" },
 { skill: "API Design (REST/GraphQL)", level: 90, icon: "🔌" },
 { skill: "Microservices Architecture", level: 95, icon: "🏗️" },
 { skill: "Distributed Systems", level: 90, icon: "🌐" },
@@ -82,11 +83,11 @@ const SYSTEM_DESIGN_SKILLS = [
 { skill: "Scalability Engineering", level: 94, icon: "📈" },
 { skill: "Performance Optimization", level: 88, icon: "⚡" },
 { skill: "Event-Driven Design (Kafka/RabbitMQ)", level: 91, icon: "🔄" },
-{ skill: "SQL & NoSQL Databases(Oracle/Cassendra)", level: 89, icon: "🗄️" },
+{ skill: "SQL & NoSQL Databases (Oracle/PostgreSQL/Cassandra)", level: 89, icon: "🗄️" },
 { skill: "Caching & In-Memory Stores (Redis)", level: 90, icon: "⚙️" },
 { skill: "Cloud & Containerization (Docker/Kubernetes)", level: 92, icon: "☁️" },
 { skill: "CI/CD & Automation", level: 87, icon: "🚀" },
-{ skill: "Security & IAM (Keycloak, JWT, SSO, MFA)", level: 85, icon: "🔐" },
+{ skill: "Identity & IAM (Keycloak, OAuth2/OIDC, JWT, CIBA, MFA)", level: 90, icon: "🔐" },
 { skill: "Monitoring & Observability", level: 83, icon: "📊" },
 
 ];
@@ -181,26 +182,50 @@ const TECH_STACK = [
     projects: "2+",
     expertise: "Advanced"
   },
-  { 
-    name: "Keycloak & IAM", 
-    color: "from-pink-500 to-rose-600", 
-    icon: "🔐", 
+  {
+    name: "Keycloak & IAM (CIBA/OAuth2)",
+    color: "from-pink-500 to-rose-600",
+    icon: "🔐",
     years: "2+",
     projects: "2+",
     expertise: "Advanced"
   },
-  { 
-    name: "CI/CD (Jenkins, GitHub Actions)", 
-    color: "from-gray-500 to-slate-600", 
-    icon: "🚀", 
+  {
+    name: "TypeScript & NestJS",
+    color: "from-blue-600 to-indigo-600",
+    icon: "🟦",
+    years: "1+",
+    projects: "1+",
+    expertise: "Advanced"
+  },
+  {
+    name: "Vue.js",
+    color: "from-emerald-500 to-teal-600",
+    icon: "💚",
+    years: "1+",
+    projects: "1+",
+    expertise: "Intermediate"
+  },
+  {
+    name: "PostgreSQL",
+    color: "from-sky-500 to-blue-700",
+    icon: "🐘",
+    years: "1+",
+    projects: "1+",
+    expertise: "Intermediate"
+  },
+  {
+    name: "CI/CD (Jenkins, GitHub Actions)",
+    color: "from-gray-500 to-slate-600",
+    icon: "🚀",
     years: "3+",
     projects: "3+",
     expertise: "Advanced"
   },
-  { 
-    name: "Monitoring (Prometheus, Grafana)", 
-    color: "from-lime-500 to-green-600", 
-    icon: "📈", 
+  {
+    name: "Monitoring (Prometheus, Grafana)",
+    color: "from-lime-500 to-green-600",
+    icon: "📈",
     years: "2+",
     projects: "2+",
     expertise: "Intermediate"
@@ -208,67 +233,105 @@ const TECH_STACK = [
 ];
 
 
+// WORK EXPERIENCE TIMELINE
+const EXPERIENCE = [
+  {
+    title: "FullStack Engineer",
+    company: "LotusFlare",
+    duration: "November 2025 – Present",
+    badge: "Current Role",
+    summary:
+      "Building carrier-grade Identity, Consent Management, and Application Registry platforms serving millions of telecom subscribers and partner applications. Designing event-driven microservices with Java, TypeScript, Kafka, and Vue.js for real-time authorization and consent lifecycle management.",
+    stats: [
+      { value: "2.5x", label: "Throughput Gain" },
+      { value: "<100ms", label: "Auth Latency" },
+      { value: "Millions", label: "Telecom Subscribers" },
+      { value: "CIBA", label: "& Non-CIBA Flows" },
+    ],
+    icon: "rocket",
+    gradient: "from-green-500 to-emerald-500",
+  },
+  {
+    title: "Team Lead",
+    company: "Accelya",
+    duration: "December 2021 – November 2025",
+    badge: "4 Years",
+    summary:
+      "Architected microservices platforms using Spring Boot & Kafka for global airline cargo operations. Led distributed systems design, security hardening, and CI/CD initiatives across a 7+ service ecosystem serving 50K+ concurrent users.",
+    stats: [
+      { value: "1.2M+", label: "Daily Transactions" },
+      { value: "99.9%", label: "System Uptime" },
+      { value: "7+", label: "Microservices" },
+      { value: "85%", label: "Fewer Security Incidents" },
+      { value: "$45M", label: "Annual Cargo Ops" },
+      { value: "8 min", label: "Deploy Time (from 45)" },
+    ],
+    icon: "target",
+    gradient: "from-blue-500 to-purple-500",
+  },
+];
+
 // FAANG-STYLE PROJECTS WITH TECHNICAL DEPTH
 const PROJECTS = [
   {
-    title: "Real-Time Pricing Engine",
-    company: "Accelya Solutions",
-    desc: "Distributed event-driven pricing engine designed to deliver sub-100ms p99 latency while processing 50K+ requests per hour. Leveraged Kafka for high-throughput messaging, Redis caching for faster rule evaluation, and Oracle optimizations to reduce computation costs by 60%, achieving 99.95% availability on Docker deployments.",
-    techStack: ["Java", "Kafka", "Redis", "Oracle", "Docker"],
+    title: "Identity, Consent & Application Registry Platform",
+    company: "LotusFlare",
+    desc: "Carrier-grade Identity, Consent Management, and Application Registry platform supporting telecom subscriber onboarding, partner integrations, and secure access to digital BSS services. Implemented CIBA and non-CIBA authorization flows for asynchronous, decoupled consent handling, SSO/RBAC via Keycloak, and centralized consent lifecycle management with full auditability.",
+    techStack: ["Java 21", "TypeScript", "NestJS", "Kafka", "Cassandra", "PostgreSQL", "Redis", "Keycloak", "OAuth2/OIDC", "CIBA"],
     metrics: {
-      throughput: "50K+ requests/hour",
-      latency: "<100ms p99",
-      availability: "99.95%",
-      costReduction: "60%"
+      throughput: "2.5x throughput gain",
+      latency: "<100ms auth latency",
+      reach: "Millions of subscribers",
+      security: "MFA + token revocation"
     },
     challenges: [
-      "Real-time rule processing at scale",
-      "Sub-second response times under high load",
-      "Complex pricing algorithm optimization"
+      "Asynchronous CIBA / non-CIBA consent flows across partner integrations",
+      "Sub-100ms token validation under high-volume subscriber traffic",
+      "Scalable Cassandra/PostgreSQL data models for identity & consent workloads"
     ],
-    impact: "30% revenue increase across 10+ airlines",
-    gradient: "from-purple-600 to-pink-600",
-    category: "Distributed Systems"
+    impact: "Carrier-grade identity platform for millions of telecom subscribers",
+    gradient: "from-green-600 to-emerald-600",
+    category: "Identity & Security"
   },
   {
-    title: "Airline Offer & Order Platform",
+    title: "Offer & Order Management System",
     company: "Accelya Solutions",
-    desc: "A scalable microservices-based platform was designed and developed to modernize airline retailing, covering the entire flow from offers and pricing to bookings and order fulfillment. Using Event Sourcing and CQRS patterns, complex booking workflows were streamlined while ensuring reliability, fault tolerance, and auditability. The platform now powers modern retailing for global airlines, handling over 10 million transactions per month with 99.9% availability and delivering faster, more efficient processing at scale.",
-    techStack: ["Spring Boot", "Microservices", "Event Sourcing", "CQRS", "Kubernetes","Redis","Kafka"],
+    desc: "Scalable microservices-based platform modernizing airline retailing end-to-end — offers, pricing, bookings, and order fulfillment. Redesigned the multithreading architecture and tuned Oracle queries with Redis caching to cut latency, while a JUnit-based QA pipeline kept regressions in check across 8 microservices.",
+    techStack: ["Java 11", "Spring Boot 2.7", "Oracle 19C", "Redis", "Kafka 2.8", "Docker", "AWS", "Angular"],
     metrics: {
-      throughput: "10M+ transactions/month",
-      services: "7+ microservices",
-      availability: "99.9%",
-      performance: "60% faster processing"
+      orders: "25K+ daily orders",
+      services: "8 microservices",
+      latency: "450ms → 135ms (70%↓)",
+      coverage: "95%+ code coverage"
     },
     challenges: [
-      "Complex booking state management",
-      "Cross-service transaction consistency",
-      "Real-time inventory synchronization"
+      "Multithreading redesign for 200% higher concurrent throughput",
+      "Cross-service consistency across 20+ RESTful endpoints",
+      "JVM tuning and query optimization under peak load"
     ],
-    impact: "Enabled modern retailing for global airlines",
+    impact: "Shortened fulfillment workflow time by 45% with 99.8% API success rate",
     gradient: "from-blue-600 to-cyan-600",
     category: "Microservices"
   },
   {
-    title: "Zero-Trust IAM System",
+    title: "Price Influencer",
     company: "Accelya Solutions",
-    desc: "Designed enterprise-grade identity platform with SSO, MFA, and JWT-based authentication. Implemented OAuth 2.0/OIDC flows and integrated with Keycloak for seamless user experience across 3+ applications.",
-    techStack: ["Spring Security", "JWT", "OAuth2", "Keycloak", "Redis"],
+    desc: "Rule-based pricing engine automating pricing decisions within the SAS airline network. Processed 15+ pricing variables across seasonal, route-based, and inventory-driven models, integrating with 6 external booking and inventory systems via asynchronous processing for peak-hour throughput.",
+    techStack: ["Java 11", "Spring Boot 2.7", "Kafka", "Redis", "Oracle", "Docker", "AWS"],
     metrics: {
-      users: "100K+ active users",
-      apps: "3+ integrated apps",
-      security: "Zero breaches",
-      loginTime: "<2s authentication"
+      volume: "8K+ daily flight offers",
+      accuracy: "99.7% pricing accuracy",
+      throughput: "180% throughput increase",
+      coverage: "92% code coverage"
     },
     challenges: [
-      "Multi-tenant security Engineering",
-      "SSO across heterogeneous systems",
-      "Compliance with aviation security standards"
+      "25+ complex business scenarios (seasonal, route-based, inventory-driven pricing)",
+      "Integration with 6 external booking & inventory platforms",
+      "Asynchronous processing for 3K+ concurrent pricing requests"
     ],
-    impact: "Secured critical airline operations globally",
-    gradient: "from-green-600 to-emerald-600",
-    category: "Security & Authentication"
+    impact: "Reduced manual pricing errors by 85% and production bugs by 70%",
+    gradient: "from-purple-600 to-pink-600",
+    category: "Distributed Systems"
   },
 ];
 
@@ -295,12 +358,12 @@ const ACHIEVEMENTS = [
     color: "from-blue-500 to-purple-500",
     metric: "2 Publications"
   },
-  { 
-    title: "System Design Expert", 
-    desc: "Engineered systems serving 100K+ users", 
-    icon: "🏗️",
+  {
+    title: "Best Performer 2024",
+    desc: "Accelya Solutions — recognized for outstanding project contributions",
+    icon: "🏅",
     color: "from-purple-500 to-pink-500",
-    metric: "100K+ Users"
+    metric: "Accelya Solutions"
   },
 ];
 
@@ -475,7 +538,7 @@ useEffect(() => {
               <span className="font-bold text-xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Saurabh Shinde
               </span>
-              <div className="text-xs text-gray-400">Senior Backend Engineer @ Accelya</div>
+              <div className="text-xs text-gray-400">Senior Backend Engineer @ LotusFlare</div>
             </div>
           </div>
           
@@ -537,9 +600,9 @@ useEffect(() => {
           
           {/* KEY HIGHLIGHTS */}
           <div className="max-w-4xl mx-auto text-xl text-gray-300 mb-12 space-y-2">
-            <div>✨ Engineering systems that handle <span className="text-blue-400 font-bold">10M+ monthly transactions</span></div>
-            <div>🎯 Delivered <span className="text-green-400 font-bold">30% revenue increase</span> through intelligent pricing systems</div>
-            <div>🏗️ Expert in <span className="text-purple-400 font-bold">Microservices, Distributed Systems & High-Scale Architecture</span></div>
+            <div>✨ Engineering systems that process <span className="text-blue-400 font-bold">1.2M+ daily transactions</span> at 99.9% uptime</div>
+            <div>🔐 Building carrier-grade <span className="text-green-400 font-bold">Identity & Consent platforms</span> for millions of telecom subscribers</div>
+            <div>🏗️ Expert in <span className="text-purple-400 font-bold">Microservices, Event-Driven Architecture & Distributed Systems</span></div>
           </div>
           
           {/* CTA BUTTONS */}
@@ -597,59 +660,40 @@ useEffect(() => {
         <div className="max-w-6xl mx-auto">
           <div className="relative">
             <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 rounded-full" />
-            
-            <div className="relative pl-24">
-              <div className="absolute left-0 w-16 h-16 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center shadow-lg">
-                <Rocket size={28} />
-              </div>
-              
-              <div className="bg-gradient-to-br from-slate-800/70 to-purple-800/40 rounded-3xl p-10 border border-white/20 hover:scale-105 transition-all duration-500">
-                <div className="grid md:grid-cols-3 gap-8 mb-8">
-                  <div className="md:col-span-2">
-                    <h3 className="text-3xl font-bold text-white mb-2">Senior Software Engineer</h3>
-                    <p className="text-2xl text-blue-400 font-semibold mb-4">Accelya Solutions</p>
-                    <p className="text-gray-300 leading-relaxed">
-                      I’m a Senior Software Engineer specializing in designing scalable microservices, distributed event-driven systems, and high-performance backend platforms. I’ve worked on large-scale airline retailing systems serving millions of passengers, with expertise in Java, Spring Boot, Kafka, RabbitMQ, Redis, and cloud-native deployments
-                    </p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <span className="px-6 py-3 rounded-2xl bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-300 text-lg font-bold border border-green-500/30">
-                      June 2021 – Present
-                    </span>
-                    <div className="mt-4 text-3xl font-bold text-purple-400">3.5+</div>
-                    <div className="text-sm text-gray-400">Years Leading Systems</div>
-                  </div>
+
+            {EXPERIENCE.map((job, index) => (
+              <div key={job.company} className={`relative pl-24 ${index < EXPERIENCE.length - 1 ? "mb-16" : ""}`}>
+                <div className={`absolute left-0 w-16 h-16 rounded-2xl bg-gradient-to-r ${job.gradient} flex items-center justify-center shadow-lg`}>
+                  {job.icon === "rocket" ? <Rocket size={28} /> : <Target size={28} />}
                 </div>
-                
-                <div className="grid md:grid-cols-6 gap-6">
-                  <div className="bg-white/10 rounded-2xl p-4 text-center backdrop-blur-sm hover:bg-white/20 transition-all">
-                    <div className="text-3xl font-bold text-blue-400">10M+</div>
-                    <div className="text-xs text-gray-400">Monthly Transactions</div>
+
+                <div className="bg-gradient-to-br from-slate-800/70 to-purple-800/40 rounded-3xl p-10 border border-white/20 hover:scale-105 transition-all duration-500">
+                  <div className="grid md:grid-cols-3 gap-8 mb-8">
+                    <div className="md:col-span-2">
+                      <h3 className="text-3xl font-bold text-white mb-2">{job.title}</h3>
+                      <p className="text-2xl text-blue-400 font-semibold mb-4">{job.company}</p>
+                      <p className="text-gray-300 leading-relaxed">{job.summary}</p>
+                    </div>
+
+                    <div className="text-center">
+                      <span className="inline-block px-6 py-3 rounded-2xl bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-300 text-base font-bold border border-green-500/30">
+                        {job.duration}
+                      </span>
+                      <div className="mt-4 text-3xl font-bold text-purple-400">{job.badge}</div>
+                    </div>
                   </div>
-                  <div className="bg-white/10 rounded-2xl p-4 text-center backdrop-blur-sm hover:bg-white/20 transition-all">
-                    <div className="text-3xl font-bold text-green-400">99.9%</div>
-                    <div className="text-xs text-gray-400">System Uptime</div>
-                  </div>
-                  <div className="bg-white/10 rounded-2xl p-4 text-center backdrop-blur-sm hover:bg-white/20 transition-all">
-                    <div className="text-3xl font-bold text-purple-400">7+</div>
-                    <div className="text-xs text-gray-400">Microservices</div>
-                  </div>
-                  <div className="bg-white/10 rounded-2xl p-4 text-center backdrop-blur-sm hover:bg-white/20 transition-all">
-                    <div className="text-3xl font-bold text-pink-400">10+</div>
-                    <div className="text-xs text-gray-400">Global Airlines</div>
-                  </div>
-                  <div className="bg-white/10 rounded-2xl p-4 text-center backdrop-blur-sm hover:bg-white/20 transition-all">
-                    <div className="text-3xl font-bold text-yellow-400">5+</div>
-                    <div className="text-xs text-gray-400">Team Members</div>
-                  </div>
-                  <div className="bg-white/10 rounded-2xl p-4 text-center backdrop-blur-sm hover:bg-white/20 transition-all">
-                    <div className="text-3xl font-bold text-cyan-400">30%</div>
-                    <div className="text-xs text-gray-400">Revenue Impact</div>
+
+                  <div className={`grid grid-cols-2 gap-6 ${job.stats.length > 4 ? "md:grid-cols-6" : "md:grid-cols-4"}`}>
+                    {job.stats.map((stat) => (
+                      <div key={stat.label} className="bg-white/10 rounded-2xl p-4 text-center backdrop-blur-sm hover:bg-white/20 transition-all">
+                        <div className="text-3xl font-bold text-blue-400">{stat.value}</div>
+                        <div className="text-xs text-gray-400">{stat.label}</div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </Section>
